@@ -1,0 +1,21 @@
+name: Deploy to Github Pages
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    name: Deploy App
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: popsiclestick/gist-sync-action@v1.1.0
+        id: sync
+        with:
+          auth: ${{ secrets.deploy_token }}
+          gist_url: https://gist.github.com/donmahallem/a05100077ec1327268f28f0b2bd8da60
+          gist_title: "Render Blender Files on Google Collab"
+          gist_description: "MOVED TO https://github.com/donmahallem/colab_blender"
+          github_file: runblender.ipynb
