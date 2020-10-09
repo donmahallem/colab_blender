@@ -1,4 +1,4 @@
-name: Deploy to Github Pages
+name: Deploy Notebook to Gist
 on:
   push:
     branches:
@@ -7,7 +7,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    name: Deploy App
+    name: Deploy Gist
     steps:
       - name: Checkout
         uses: actions/checkout@v2
