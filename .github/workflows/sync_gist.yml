@@ -14,6 +14,6 @@ jobs:
       - uses: exuanbo/actions-deploy-gist@v1.0.3
         id: sync
         with:
-          auth: ${{ secrets.deploy_token }}
+          token: ${{ secrets.deploy_token }}
           gist_id: a05100077ec1327268f28f0b2bd8da60
-          github_file: ./runblender.ipynb
+          file_path: ./runblender.ipynb
