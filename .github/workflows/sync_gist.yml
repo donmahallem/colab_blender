@@ -11,11 +11,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - uses: popsiclestick/gist-sync-action@v1.1
+      - uses: exuanbo/actions-deploy-gist@v1.0.3
         id: sync
         with:
           auth: ${{ secrets.deploy_token }}
-          gist_url: https://gist.github.com/donmahallem/a05100077ec1327268f28f0b2bd8da60
-          gist_title: "Render Blender Files on Google Collab"
-          gist_description: "MOVED TO https://github.com/donmahallem/colab_blender"
-          github_file: runblender.ipynb
+          gist_id: a05100077ec1327268f28f0b2bd8da60
+          github_file: ./runblender.ipynb
