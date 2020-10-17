@@ -1,10 +1,11 @@
-name: Validate JSONs
+name: Validate Notebook
 
 on: [pull_request,push]
 
 jobs:
   verify-json-validation:
     runs-on: ubuntu-latest
+    name: Verify Clean Notebook
     steps:
       - uses: actions/checkout@v1
       - name: Validate JSON
