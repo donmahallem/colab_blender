@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "Valdiate outputs",
+    "type": "object",
+    "additionalProperties": true,
+    "properties": {
+        "cells": {
+            "description": "Array of cells of the current notebook.",
+            "type": "array",
+            "items": {
+                "description": "Notebook code cell.",
+                "type": "object",
+                "additionalProperties": true,
+                "properties": {
+                    "outputs": {
+                        "description": "Execution, display, or stream outputs.",
+                        "type": "array",
+                        "items": {"$ref": "#/definitions/output"},
+                        "maxItems":0
+                    },
+                    "execution_count": {
+                        "description": "The code cell's prompt number. Will be null if the cell has not been run.",
+                        "type": ["integer", "null"],
+                        "minimum": 0,
+                        "maximum": 0
+                    }
+                }
+            }
+        }
+    }
+}
