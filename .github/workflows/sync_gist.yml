@@ -24,4 +24,5 @@ jobs:
         with:
           token: ${{ secrets.deploy_token }}
           gist_id: a05100077ec1327268f28f0b2bd8da60
-          file_path: ./README.md
+          gist_file_name: README.md
+          file_path: ./GIST_README.md
