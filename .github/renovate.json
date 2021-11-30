@@ -4,6 +4,6 @@
         "master"
     ],
     "extends": [
-        "config:base"
+        "@donmahallem"
     ]
 }
