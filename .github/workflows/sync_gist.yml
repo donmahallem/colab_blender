@@ -12,14 +12,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Sync Blender Notebook
-        uses: exuanbo/actions-deploy-gist@v1.0.5
+        uses: exuanbo/actions-deploy-gist@v1.1.1
         id: sync_notebook
         with:
           token: ${{ secrets.deploy_token }}
           gist_id: a05100077ec1327268f28f0b2bd8da60
           file_path: ./runblender.ipynb
       - name: Sync Readme
-        uses: exuanbo/actions-deploy-gist@v1.0.5
+        uses: exuanbo/actions-deploy-gist@v1.1.1
         id: sync_readme
         with:
           token: ${{ secrets.deploy_token }}
