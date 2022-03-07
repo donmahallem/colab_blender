@@ -10,7 +10,7 @@ jobs:
     name: Deploy Gist
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Sync Blender Notebook
         uses: exuanbo/actions-deploy-gist@v1.1.2
         id: sync_notebook
